@@ -6,6 +6,7 @@ export const applyFilters = async (page: Page): Promise<void> => {
 
   await page.waitForSelector("button[data-testid='see-deal-link'")
 
+  await delay(2000)
   await page.click("button[class='sc-yUtDh AuSJm']")
   await delay(3000)
 
