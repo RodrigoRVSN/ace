@@ -1,7 +1,8 @@
-# 👕 Receiving a email of hotter promotions every day
+# 🔥 Receiving an email of hotter promotions every day
 
 ![image](https://github.com/RodrigoRVSN/ace/assets/75763403/a244a191-dcb9-4813-bdd4-03b08b67d120)
 
+![image](https://github.com/RodrigoRVSN/ace/assets/75763403/490fbb43-b6c8-4192-8ce9-1916d1a5d623)
 
 <br>
 
