@@ -1,4 +1,7 @@
-# 👕 Next.JS Template with Linter
+# 👕 Receiving a email of hotter promotions every day
+
+![image](https://github.com/RodrigoRVSN/ace/assets/75763403/a244a191-dcb9-4813-bdd4-03b08b67d120)
+
 
 <br>
 
