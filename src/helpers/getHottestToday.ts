@@ -1,5 +1,6 @@
 import puppeteer from 'puppeteer'
 import { IPromotion } from '@App/@types/IPromotion'
+import { applyFilters } from './applyFilters'
 
 const BASE_URL = 'https://www.pelando.com.br'
 const PROMOTIONS_URL = `${BASE_URL}/mais-quentes`
@@ -10,18 +11,9 @@ export const getHottestToday = async (): Promise<IPromotion[]> => {
 
   await page.goto(PROMOTIONS_URL)
 
-  await page.waitForSelector("button[data-testid='see-deal-link'")
+  await applyFilters(page)
 
-  await page.click("button[title='Abrir dropdown']")
-
-  await page.click('input[type="checkbox"]')
-
-  await page.waitForSelector('button[class="sc-317bc911-4 gMznWX"]')
-
-  await page.click('button[class="sc-317bc911-4 gMznWX"]')
-
-  await page.waitForSelector("button[data-testid='see-deal-link'")
-
+  console.info('🧾 Listing promotions...')
   const promotionsOfDay = await page.evaluate(() => {
     const listOfPromotions = document.querySelectorAll('li[class="sc-cb8be5d8-2 cvjKca"]')
     const promotions: IPromotion[] = []

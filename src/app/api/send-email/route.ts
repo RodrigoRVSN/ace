@@ -7,13 +7,13 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function GET () {
   try {
-    console.info('Getting today promotions...')
+    console.info('🔥 Getting today promotions...')
 
     const promotionsOfDay = await getHottestToday()
 
     const todayDate = new Intl.DateTimeFormat('en-US').format(new Date())
 
-    console.info('Sending email...')
+    console.info('📧 Sending email...')
 
     const data = await resend.emails.send({
       from: 'onboarding@resend.dev',
