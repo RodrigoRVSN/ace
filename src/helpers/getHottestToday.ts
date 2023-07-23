@@ -1,12 +1,17 @@
-import puppeteer from 'puppeteer'
+import puppeteer from 'puppeteer-core'
 import { IPromotion } from '@App/@types/IPromotion'
 import { applyFilters } from './applyFilters'
+import { getOptions } from './chromeOptions'
 
 const BASE_URL = 'https://www.pelando.com.br'
 const PROMOTIONS_URL = `${BASE_URL}/mais-quentes`
 
+const isDev = process.env.NODE_ENV !== 'production'
+
 export const getHottestToday = async (): Promise<IPromotion[]> => {
-  const browser = await puppeteer.launch({ headless: 'new' })
+  const options = await getOptions(isDev)
+  const browser = await puppeteer.launch(options)
+
   const page = await browser.newPage()
 
   await page.goto(PROMOTIONS_URL)

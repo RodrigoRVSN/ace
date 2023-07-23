@@ -20,8 +20,10 @@
     "@react-email/html": "0.0.4",
     "@react-email/img": "0.0.5",
     "@react-email/link": "0.0.5",
+    "@sparticuz/chromium": "^114.0.0",
     "next": "13.4.12",
     "puppeteer": "^20.9.0",
+    "puppeteer-core": "^20.9.0",
     "react": "^18",
     "react-dom": "^18",
     "resend": "^0.17.1"
