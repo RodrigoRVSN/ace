@@ -1,3 +1,4 @@
+import { Column } from '@react-email/column'
 import { Heading } from '@react-email/heading'
 import { Hr } from '@react-email/hr'
 import { Html } from '@react-email/html'
@@ -17,26 +18,30 @@ export const EmailTemplate = (promotions: IPromotion[]) => {
             key={id}
             href={promotionURL}
           >
-            <Img
-              alt={title}
-              src={imageURL}
-              width={130}
-              height={130}
-            />
+            <Column style={{ marginRight: 8 }}>
+              <Img
+                alt={title}
+                src={imageURL}
+                width={130}
+                height={130}
+              />
+            </Column>
 
-            <Heading
-              as='h3'
-              color='black'
-            >
-              {title}
-            </Heading>
+            <Column>
+              <Heading
+                as='h2'
+                style={{ color: 'black' }}
+              >
+                {title}
+              </Heading>
 
-            <Heading
-              as='h4'
-              color='black'
-            >
-              {price}
-            </Heading>
+              <Heading
+                as='h3'
+                style={{ color: 'black' }}
+              >
+                {price}
+              </Heading>
+            </Column>
           </Link>
           <Hr />
         </>
