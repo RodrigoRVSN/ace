@@ -38,7 +38,7 @@
     "bun-framework-next": "^12.2.5",
     "c8": "^8.0.0",
     "cypress": "^12.17.2",
-    "eslint": "^8.45.0",
+    "eslint": "^8.50.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-import-resolver-typescript": "^3.5.5",
